@@ -1,0 +1,167 @@
+.section {
+  overflow: hidden;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 3.5rem;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--r-lg);
+  padding: clamp(1.75rem, 3vw, 2.75rem);
+  padding-top: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.cardBlue {
+  background: var(--blue);
+  color: var(--cream);
+}
+
+.cardInk {
+  background: var(--ink);
+  color: var(--cream);
+}
+
+/* Zona decorativa: ocupa la franja superior y nunca pisa el texto */
+.deco {
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 230px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.loop {
+  position: absolute;
+  right: -6%;
+  top: -55%;
+  width: 62%;
+  height: 210%;
+}
+
+/* Pila de formas: el cuenco rosa apoya en la base, el círculo amarillo descansa sobre el cuenco
+   y el triángulo verde se apoya a su lado. Separación mínima, sin tocarse. */
+.stack {
+  position: absolute;
+  right: clamp(1.5rem, 3vw, 2.75rem);
+  bottom: 0;
+  width: 270px;
+  height: 200px;
+}
+
+.stackBowl {
+  position: absolute;
+  right: 0;
+  bottom: -2px;
+  /* el SVG de cuenco tiene el semicírculo en la mitad inferior del viewBox: se compensa */
+  transform: translateY(20%);
+}
+
+.stackCircle {
+  position: absolute;
+  right: 43px;
+  bottom: 84px;
+}
+
+.stackTriangle {
+  position: absolute;
+  right: 160px;
+  bottom: -2px;
+}
+
+.cardBody {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 34rem;
+}
+
+.label {
+  font-size: var(--fs-eyebrow);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  opacity: 0.85;
+}
+
+.cardTitle {
+  font-weight: 600;
+  font-size: clamp(1.5rem, 2.2vw, 2rem);
+}
+
+.cardText {
+  opacity: 0.88;
+}
+
+.bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line-on-ink);
+}
+
+.bullets li {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  font-size: 0.9375rem;
+}
+
+.bullets li::before {
+  content: '';
+  flex: 0 0 auto;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-top: 0.55em;
+  background: var(--yellow);
+}
+
+.cardInk .bullets li::before {
+  background: var(--pink);
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  font-weight: 600;
+  align-self: flex-start;
+  border-bottom: 1.5px solid currentColor;
+  padding-bottom: 2px;
+  transition: gap 200ms var(--ease);
+}
+
+.link:hover {
+  gap: 0.85rem;
+}
+
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding-top: 220px;
+  }
+
+  .deco {
+    height: 200px;
+  }
+
+  .stack {
+    transform: scale(0.85);
+    transform-origin: bottom right;
+  }
+}

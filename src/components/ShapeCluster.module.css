@@ -1,0 +1,33 @@
+.cluster {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.piece {
+  transform-box: view-box;
+}
+
+.animate .piece {
+  opacity: 0;
+  animation: settle 720ms var(--ease) forwards;
+}
+
+/* Cada pieza "cae" suavemente y se asienta sobre la anterior. Sin rebote. */
+@keyframes settle {
+  from {
+    opacity: 0;
+    translate: 0 -10px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate .piece {
+    opacity: 1;
+    animation: none;
+  }
+}

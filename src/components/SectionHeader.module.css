@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  max-width: 46rem;
+}
+
+.center {
+  align-items: center;
+  text-align: center;
+  margin-inline: auto;
+}
+
+.underline {
+  margin-top: -0.25rem;
+}
+
+.lead {
+  color: var(--ink-soft);
+  max-width: 40rem;
+}
+
+.onInk .lead {
+  color: var(--cream-soft-on-ink);
+}
+
+.onInk :global(.eyebrow) {
+  color: var(--yellow);
+}

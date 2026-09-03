@@ -1,0 +1,119 @@
+.section {
+  overflow: hidden;
+}
+
+.phasesWrap {
+  margin-top: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.subLabel {
+  color: var(--blue);
+}
+
+.phases {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.phase {
+  position: relative;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.6rem;
+}
+
+.num {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.25rem;
+}
+
+.phaseTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.rule {
+  width: 28px;
+  height: 2px;
+  border-radius: 2px;
+}
+
+.items {
+  color: var(--ink-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.arrow {
+  position: absolute;
+  right: -0.625rem;
+  top: 50%;
+  transform: translate(50%, -50%);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--cream-soft);
+  color: var(--ink-mute);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.tools {
+  margin-top: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.toolList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 2rem;
+}
+
+.tool {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 600;
+  font-size: 0.9375rem;
+}
+
+@media (max-width: 1000px) {
+  .phases {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .arrow {
+    display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .phases {
+    grid-template-columns: 1fr;
+  }
+}

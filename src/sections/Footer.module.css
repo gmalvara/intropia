@@ -1,0 +1,112 @@
+.footer {
+  background: var(--ink);
+  color: var(--cream);
+  padding-top: 5rem;
+  overflow: hidden;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr) minmax(0, 0.9fr) minmax(0, 1fr);
+  gap: 3rem;
+  align-items: start;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.logo {
+  width: 72px;
+  height: auto;
+}
+
+.tagline {
+  font-size: 1.375rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  max-width: 16rem;
+}
+
+.claim {
+  color: var(--cream-soft-on-ink);
+  font-size: 0.9375rem;
+}
+
+.colTitle {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--yellow);
+  margin-bottom: 1rem;
+}
+
+.nav ul,
+.contact ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.nav a,
+.contact a {
+  color: var(--cream);
+  opacity: 0.85;
+  transition: opacity 160ms var(--ease);
+}
+
+.nav a:hover,
+.contact a:hover {
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.partner {
+  margin-top: 1rem;
+  color: var(--cream-soft-on-ink);
+  font-size: 0.875rem;
+}
+
+.partner a {
+  font-weight: 600;
+}
+
+.art {
+  align-self: end;
+  justify-self: end;
+  width: 100%;
+  max-width: 260px;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-block: 1.5rem;
+  margin-top: 3rem;
+  border-top: 1px solid var(--line-on-ink);
+  font-size: 0.8125rem;
+  color: var(--cream-soft-on-ink);
+}
+
+@media (max-width: 1000px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .art {
+    justify-self: start;
+  }
+}
+
+@media (max-width: 560px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
