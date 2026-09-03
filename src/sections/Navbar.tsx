@@ -25,7 +25,7 @@ export function Navbar() {
     <header className={[styles.header, scrolled ? styles.scrolled : ''].join(' ')}>
       <div className={`container ${styles.inner}`}>
         <a href="#top" className={styles.logo} aria-label={`${site.name}, ir al inicio`}>
-          <img src="/brand/logo/horizontal-negro.png" alt="" width={1007} height={149} />
+          <img src="/brand/logo/horizontal-color.png" alt="" width={1007} height={149} />
         </a>
 
         <nav className={styles.nav} aria-label="Principal">
