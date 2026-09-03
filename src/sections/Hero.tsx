@@ -1,6 +1,5 @@
 import { hero } from '../data/content';
 import { RichTitle } from '../components/RichTitle';
-import { ShapeCluster } from '../components/ShapeCluster';
 import { Icon } from '../components/Icon';
 import styles from './Hero.module.css';
 
@@ -23,9 +22,6 @@ export function Hero() {
           </div>
         </div>
 
-        <div className={styles.art}>
-          <ShapeCluster variant="hero" className={styles.cluster} />
-        </div>
       </div>
 
       <a href="#conviccion" className={styles.scroll} aria-label="Bajar a la siguiente sección">
