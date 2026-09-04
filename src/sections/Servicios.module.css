@@ -14,7 +14,7 @@
   overflow: hidden;
   border-radius: var(--r-lg);
   padding: clamp(1.75rem, 3vw, 2.75rem);
-  padding-top: 250px;
+  padding-top: 188px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -34,7 +34,7 @@
 .deco {
   position: absolute;
   inset: 0 0 auto 0;
-  height: 230px;
+  height: 173px;
   overflow: hidden;
   pointer-events: none;
 }
@@ -43,8 +43,8 @@
   position: absolute;
   right: -6%;
   top: -55%;
-  width: 62%;
-  height: 210%;
+  width: 46.5%;
+  height: 157.5%;
 }
 
 /* Pila de formas: el cuenco rosa apoya en la base, el círculo amarillo descansa sobre el cuenco
@@ -55,6 +55,8 @@
   bottom: 0;
   width: 270px;
   height: 200px;
+  transform: scale(0.75);
+  transform-origin: bottom right;
 }
 
 .stackBowl {
@@ -153,15 +155,15 @@
   }
 
   .card {
-    padding-top: 220px;
+    padding-top: 165px;
   }
 
   .deco {
-    height: 200px;
+    height: 150px;
   }
 
   .stack {
-    transform: scale(0.85);
+    transform: scale(0.6375);
     transform-origin: bottom right;
   }
 }
