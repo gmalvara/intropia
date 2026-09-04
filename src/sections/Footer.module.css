@@ -77,10 +77,10 @@
 }
 
 .art {
-  align-self: end;
+  align-self: center;
   justify-self: end;
   width: 100%;
-  max-width: 260px;
+  max-width: 165px;
 }
 
 .bottom {

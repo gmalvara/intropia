@@ -1,6 +1,6 @@
 import styles from './ShapeCluster.module.css';
 
-type Variant = 'hero' | 'compact' | 'tower';
+type Variant = 'hero' | 'compact' | 'tower' | 'footer';
 
 /**
  * Composiciones de formas que se sostienen unas a otras y arman algo más grande.
@@ -85,7 +85,16 @@ const COMPACT: Piece[] = [
   { kind: 'semicircle', color: 'var(--yellow)', x: 60, y: 28, w: 30, delay: 480, rotate: -30 },
 ];
 
-const VARIANTS: Record<Variant, Piece[]> = { hero: HERO, tower: TOWER, compact: COMPACT };
+/* Composición compacta para el pie de página: círculo rosa, triángulo azul,
+   bloque verde y círculo amarillo, inspirada en el recurso de marca. */
+const FOOTER: Piece[] = [
+  { kind: 'circle', color: 'var(--pink)', x: 4, y: 4, w: 31, delay: 0 },
+  { kind: 'triangle', color: 'var(--blue)', x: 35, y: 10, w: 30, h: 30, delay: 90 },
+  { kind: 'square', color: 'var(--green)', x: 7, y: 38, w: 29, h: 29, delay: 180 },
+  { kind: 'circle', color: 'var(--yellow)', x: 39, y: 43, w: 30, delay: 270 },
+];
+
+const VARIANTS: Record<Variant, Piece[]> = { hero: HERO, tower: TOWER, compact: COMPACT, footer: FOOTER };
 
 type Props = {
   variant?: Variant;

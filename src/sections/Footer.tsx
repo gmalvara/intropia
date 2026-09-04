@@ -31,9 +31,6 @@ export function Footer() {
               <a href={`mailto:${site.email}`}>{site.email}</a>
             </li>
             <li>
-              <a href={`tel:+${site.phoneRaw}`}>{site.phone}</a>
-            </li>
-            <li>
               <a href={site.whatsapp} target="_blank" rel="noreferrer">
                 WhatsApp
               </a>
@@ -48,7 +45,7 @@ export function Footer() {
         </div>
 
         <div className={styles.art} aria-hidden="true">
-          <ShapeCluster variant="compact" animate={false} />
+          <ShapeCluster variant="footer" animate={false} />
         </div>
       </div>
 
