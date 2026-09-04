@@ -26,6 +26,7 @@
 
 .title {
   max-width: 17ch;
+  font-size: clamp(2.35rem, 5vw, 4.1rem);
   animation: fadeUp 700ms var(--ease) 80ms both;
 }
 

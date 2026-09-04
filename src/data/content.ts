@@ -29,7 +29,9 @@ export const nav = [
 
 export const hero = {
   title: [
-    { text: '¿Está tu organización preparada para convertir los ' },
+    { text: '¿Está tu ' },
+    { text: 'organización', accent: 'pink' as Accent },
+    { text: ' preparada para convertir los ' },
     { text: 'desafíos', accent: 'blue' as Accent },
     { text: ' en ' },
     { text: 'oportunidades', accent: 'green' as Accent },

@@ -30,9 +30,13 @@ export function Nosotros() {
         </div>
 
         <Reveal className={styles.founder}>
-          <div className={styles.avatar} aria-hidden="true">
-            <span>GA</span>
-          </div>
+          <img
+            src="/brand/gabriela-alvarado.jpg"
+            alt="Gabriela Alvarado"
+            className={styles.avatar}
+            width={1200}
+            height={1200}
+          />
           <div className={styles.founderBody}>
             <span className="eyebrow">Quién está detrás</span>
             <h3 className={styles.founderName}>{about.founder.name}</h3>

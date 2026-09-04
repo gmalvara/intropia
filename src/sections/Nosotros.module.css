@@ -58,14 +58,8 @@
   width: 128px;
   height: 128px;
   border-radius: 50%;
-  background: var(--purple-tint);
-  color: var(--purple);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  object-fit: cover;
+  object-position: center 26%;
 }
 
 .founderBody {
