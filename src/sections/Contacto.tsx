@@ -36,29 +36,6 @@ export function Contacto() {
             ))}
           </ul>
 
-          <Reveal className={styles.details}>
-            <a href={`mailto:${site.email}`} className={styles.detail}>
-              <IconBadge icon="mail" accent="blue" size="sm" />
-              <span>
-                <b>Correo</b>
-                {site.email}
-              </span>
-            </a>
-            <a href={`tel:+${site.phoneRaw}`} className={styles.detail}>
-              <IconBadge icon="phone" accent="green" size="sm" />
-              <span>
-                <b>Teléfono</b>
-                {site.phone}
-              </span>
-            </a>
-            <a href={site.whatsapp} target="_blank" rel="noreferrer" className={styles.detail}>
-              <IconBadge icon="whatsapp" accent="green" size="sm" />
-              <span>
-                <b>WhatsApp</b>
-                Escríbenos directo
-              </span>
-            </a>
-          </Reveal>
         </div>
 
         <Reveal className={styles.formWrap} delay={120}>
