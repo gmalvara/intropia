@@ -13,7 +13,7 @@ type Tile =
 const TILES: Tile[] = [
   { type: 'media', label: 'Foto de taller', kind: 'photo', src: '/casos/galeria-davita.jpg' },
   { type: 'phrase', text: gallery.phrases[1], shape: 'circle', color: 'green', dark: true },
-  { type: 'media', label: 'Video de actividad', kind: 'video' },
+  { type: 'media', label: 'Video de actividad', kind: 'video', src: '/casos/actividad-taller.mp4' },
   { type: 'phrase', text: gallery.phrases[0], shape: 'triangle', color: 'yellow' },
   { type: 'media', label: 'Foto de taller', kind: 'photo', src: '/casos/galeria-consalud.jpg', position: '55% center' },
   { type: 'phrase', text: gallery.phrases[2], shape: 'semicircle', color: 'purple', dark: true },
@@ -43,6 +43,11 @@ export function Galeria() {
                   <Shape kind={t.shape} color={t.color} size="46%" className={styles.tileShape} />
                   <span className={styles.phrase}>{t.text}</span>
                 </>
+              ) : t.src && t.kind === 'video' ? (
+                <video className={styles.video} controls preload="metadata" playsInline>
+                  <source src={t.src} type="video/mp4" />
+                  Tu navegador no puede reproducir este video.
+                </video>
               ) : t.src ? (
                 <img src={t.src} alt={t.label} className={styles.photo} style={{ objectPosition: t.position }} loading="lazy" />
               ) : (
