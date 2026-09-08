@@ -36,6 +36,57 @@
   border: 1px solid var(--line);
 }
 
+.directContact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.contactEmail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  color: var(--ink);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.contactEmail span {
+  color: var(--ink-mute);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 2.85rem;
+  padding: 0.7rem 1rem;
+  border-radius: var(--r-pill);
+  background: var(--green);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+  transition:
+    background-color 200ms var(--ease),
+    transform 200ms var(--ease);
+}
+
+.whatsapp:hover {
+  background: var(--ink);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -85,6 +136,13 @@
 @media (max-width: 1000px) {
   .grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .directContact {
+    align-items: flex-start;
+    flex-direction: column;
   }
 }
 

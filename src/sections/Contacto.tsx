@@ -39,6 +39,16 @@ export function Contacto() {
         </div>
 
         <Reveal className={styles.formWrap} delay={120}>
+          <div className={styles.directContact}>
+            <a className={styles.contactEmail} href={`mailto:${site.email}`}>
+              <span>Contacto directo</span>
+              {site.email}
+            </a>
+            <a className={styles.whatsapp} href={site.whatsapp} target="_blank" rel="noreferrer">
+              <Icon name="whatsapp" size={18} />
+              Escribir por WhatsApp
+            </a>
+          </div>
           <form className={styles.form} onSubmit={onSubmit}>
             <label className={styles.field}>
               <span>{contact.form.name}</span>
