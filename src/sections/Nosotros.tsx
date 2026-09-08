@@ -31,7 +31,7 @@ export function Nosotros() {
 
         <Reveal className={styles.founder}>
           <img
-            src="/brand/gabriela-alvarado.jpg"
+            src="/brand/gabriela-alvarado-v3.png"
             alt="Gabriela Alvarado"
             className={styles.avatar}
             width={1200}
