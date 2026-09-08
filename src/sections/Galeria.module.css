@@ -20,20 +20,20 @@
 }
 
 .tileDark {
-  background: var(--ink);
-  border: 1px solid var(--line-on-ink);
-  color: var(--cream);
+  background: #fff;
+  border: 1px solid var(--line);
+  color: var(--ink);
 }
 
 .tileCream {
-  background: var(--cream);
+  background: #fff;
   color: var(--ink);
 }
 
 .tileMedia {
-  background: rgba(246, 228, 212, 0.06);
-  border: 1px dashed var(--line-on-ink);
-  color: var(--cream-soft-on-ink);
+  background: #fff;
+  border: 1px solid var(--line);
+  color: var(--ink-soft);
   align-items: center;
   justify-content: center;
 }
@@ -47,7 +47,7 @@
 
 .video {
   display: block;
-  background: var(--ink);
+  background: #fff;
 }
 
 .tileShape {

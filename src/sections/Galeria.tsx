@@ -12,20 +12,20 @@ type Tile =
 
 const TILES: Tile[] = [
   { type: 'media', label: 'Foto de taller', kind: 'photo', src: '/casos/galeria-davita.jpg' },
-  { type: 'phrase', text: gallery.phrases[1], shape: 'circle', color: 'green', dark: true },
+  { type: 'phrase', text: gallery.phrases[1], shape: 'circle', color: 'green' },
   { type: 'media', label: 'Video de actividad', kind: 'video', src: '/casos/actividad-taller.mp4' },
   { type: 'phrase', text: gallery.phrases[0], shape: 'triangle', color: 'yellow' },
+  { type: 'phrase', text: gallery.phrases[2], shape: 'semicircle', color: 'purple' },
   { type: 'media', label: 'Foto de taller', kind: 'photo', src: '/casos/galeria-consalud.jpg', position: '55% center' },
-  { type: 'phrase', text: gallery.phrases[2], shape: 'semicircle', color: 'purple', dark: true },
   { type: 'phrase', text: gallery.phrases[3], shape: 'arch', color: 'pink' },
   { type: 'media', label: 'Foto de taller', kind: 'photo', src: '/casos/galeria-cierre.jpg' },
 ];
 
 export function Galeria() {
   return (
-    <section id="galeria" className={`section section--ink ${styles.section}`}>
+    <section id="galeria" className={`section ${styles.section}`}>
       <div className="container">
-        <SectionHeader eyebrow={gallery.eyebrow} title={gallery.title} lead={gallery.lead} underline="pink" onInk />
+        <SectionHeader eyebrow={gallery.eyebrow} title={gallery.title} lead={gallery.lead} underline="pink" />
 
         <ul className={styles.grid}>
           {TILES.map((t, i) => (
