@@ -1,8 +1,6 @@
 import { services } from '../data/content';
 import { SectionHeader } from '../components/SectionHeader';
 import { Reveal } from '../components/Reveal';
-import { Loop } from '../components/Loop';
-import { Shape } from '../components/Shape';
 import { Icon } from '../components/Icon';
 import styles from './Servicios.module.css';
 
@@ -21,18 +19,13 @@ export function Servicios() {
               delay={i * 120}
               className={[styles.card, line.kind === 'acompanamiento' ? styles.cardBlue : styles.cardInk].join(' ')}
             >
-              {/* Zona decorativa superior. Gestión del Cambio = bucle (procesos de acompañamiento);
-                  Talleres = formas geométricas que se sostienen entre sí (comunicación general y talleres). */}
+              {/* Franja de avance: acompaña el contenido sin quitarle protagonismo. */}
               <div className={styles.deco} aria-hidden="true">
-                {line.kind === 'acompanamiento' ? (
-                  <Loop tone="cream" className={styles.loop} />
-                ) : (
-                  <div className={styles.stack}>
-                    <Shape kind="triangle" color="green" size={104} className={styles.stackTriangle} />
-                    <Shape kind="semicircle" color="pink" size={150} className={styles.stackBowl} />
-                    <Shape kind="circle" color="yellow" size={64} className={styles.stackCircle} />
-                  </div>
-                )}
+                <div className={[styles.banner, line.kind === 'acompanamiento' ? styles.bannerBlue : styles.bannerInk].join(' ')}>
+                  <span />
+                  <span />
+                  <span />
+                </div>
               </div>
 
               <div className={styles.cardBody}>

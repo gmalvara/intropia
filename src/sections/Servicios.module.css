@@ -30,53 +30,53 @@
   color: var(--cream);
 }
 
-/* Zona decorativa: ocupa la franja superior y nunca pisa el texto */
+/* Franja decorativa: sugiere avance y conexión sin competir con el texto. */
 .deco {
   position: absolute;
   inset: 0 0 auto 0;
   height: 86px;
-  overflow: hidden;
   pointer-events: none;
 }
 
-.loop {
+.banner {
   position: absolute;
-  right: -3%;
-  top: -27.5%;
-  width: 23.25%;
-  height: 78.75%;
+  top: 1.5rem;
+  right: clamp(1.75rem, 3vw, 2.75rem);
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  height: 0.7rem;
 }
 
-/* Pila de formas: el cuenco rosa apoya en la base, el círculo amarillo descansa sobre el cuenco
-   y el triángulo verde se apoya a su lado. Separación mínima, sin tocarse. */
-.stack {
-  position: absolute;
-  right: clamp(1.5rem, 3vw, 2.75rem);
-  bottom: 0;
-  width: 270px;
-  height: 200px;
-  transform: scale(0.375);
-  transform-origin: bottom right;
+.banner span {
+  display: block;
+  width: 2.8rem;
+  height: 100%;
+  border-radius: var(--r-pill);
 }
 
-.stackBowl {
-  position: absolute;
-  right: 0;
-  bottom: -2px;
-  /* el SVG de cuenco tiene el semicírculo en la mitad inferior del viewBox: se compensa */
-  transform: translateY(20%);
+.banner span:nth-child(2) {
+  width: 1.6rem;
 }
 
-.stackCircle {
-  position: absolute;
-  right: 43px;
-  bottom: 84px;
+.banner span:nth-child(3) {
+  width: 0.8rem;
 }
 
-.stackTriangle {
-  position: absolute;
-  right: 160px;
-  bottom: -2px;
+.bannerBlue span {
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.bannerInk span:nth-child(1) {
+  background: var(--green);
+}
+
+.bannerInk span:nth-child(2) {
+  background: var(--pink);
+}
+
+.bannerInk span:nth-child(3) {
+  background: var(--yellow);
 }
 
 .cardBody {
@@ -162,8 +162,7 @@
     height: 75px;
   }
 
-  .stack {
-    transform: scale(0.31875);
-    transform-origin: bottom right;
+  .banner {
+    top: 1.25rem;
   }
 }
