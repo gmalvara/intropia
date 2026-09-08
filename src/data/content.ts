@@ -147,7 +147,6 @@ export const services = {
         'Team building y cohesión de equipos',
         'Programas de liderazgo y desarrollo organizacional',
         'Talleres estratégicos y de alineamiento',
-        'Train the trainers: oratoria y educación de adultos',
       ],
       cta: { label: 'Ver metodologías', href: '#metodologias' },
     },
