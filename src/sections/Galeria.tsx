@@ -8,17 +8,17 @@ import styles from './Galeria.module.css';
 
 type Tile =
   | { type: 'phrase'; text: string; shape: ShapeKind; color: Accent; dark?: boolean }
-  | { type: 'media'; label: string; kind: 'photo' | 'video' };
+  | { type: 'media'; label: string; kind: 'photo' | 'video'; src?: string; position?: string };
 
 const TILES: Tile[] = [
-  { type: 'media', label: 'Foto de taller', kind: 'photo' },
+  { type: 'media', label: 'Foto de taller', kind: 'photo', src: '/casos/galeria-davita.jpg' },
   { type: 'phrase', text: gallery.phrases[1], shape: 'circle', color: 'green', dark: true },
   { type: 'media', label: 'Video de actividad', kind: 'video' },
   { type: 'phrase', text: gallery.phrases[0], shape: 'triangle', color: 'yellow' },
-  { type: 'media', label: 'Foto de taller', kind: 'photo' },
+  { type: 'media', label: 'Foto de taller', kind: 'photo', src: '/casos/galeria-consalud.jpg', position: '55% center' },
   { type: 'phrase', text: gallery.phrases[2], shape: 'semicircle', color: 'purple', dark: true },
   { type: 'phrase', text: gallery.phrases[3], shape: 'arch', color: 'pink' },
-  { type: 'media', label: 'Foto de taller', kind: 'photo' },
+  { type: 'media', label: 'Foto de taller', kind: 'photo', src: '/casos/galeria-cierre.jpg' },
 ];
 
 export function Galeria() {
@@ -43,6 +43,8 @@ export function Galeria() {
                   <Shape kind={t.shape} color={t.color} size="46%" className={styles.tileShape} />
                   <span className={styles.phrase}>{t.text}</span>
                 </>
+              ) : t.src ? (
+                <img src={t.src} alt={t.label} className={styles.photo} style={{ objectPosition: t.position }} loading="lazy" />
               ) : (
                 <div className={styles.placeholder}>
                   <Icon name={t.kind === 'video' ? 'play' : 'people'} size={28} />
