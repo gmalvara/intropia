@@ -14,7 +14,7 @@
   overflow: hidden;
   border-radius: var(--r-lg);
   padding: clamp(1.75rem, 3vw, 2.75rem);
-  padding-top: 94px;
+  padding-top: 60px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -155,7 +155,7 @@
   }
 
   .card {
-    padding-top: 82px;
+    padding-top: 60px;
   }
 
   .deco {
