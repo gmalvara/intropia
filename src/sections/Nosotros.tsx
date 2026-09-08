@@ -50,7 +50,7 @@ export function Nosotros() {
             </p>
           </div>
           <div className={styles.founderArt}>
-            <ShapeCluster variant="tower" />
+            <ShapeCluster variant="support" />
           </div>
         </Reveal>
       </div>

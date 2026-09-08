@@ -1,6 +1,6 @@
 import styles from './ShapeCluster.module.css';
 
-type Variant = 'hero' | 'compact' | 'tower' | 'footer';
+type Variant = 'hero' | 'compact' | 'tower' | 'support' | 'footer';
 
 /**
  * Composiciones de formas que se sostienen unas a otras y arman algo más grande.
@@ -85,6 +85,16 @@ const COMPACT: Piece[] = [
   { kind: 'semicircle', color: 'var(--yellow)', x: 60, y: 28, w: 30, delay: 480, rotate: -30 },
 ];
 
+/* Composición de apoyo: una pieza central se sostiene sobre una base compartida,
+   con dos arcos laterales que la contienen. */
+const SUPPORT: Piece[] = [
+  { kind: 'arch', color: 'var(--green)', x: 4, y: 60, w: 28, h: 34, delay: 0 },
+  { kind: 'square', color: 'var(--yellow)', x: 37, y: 68, w: 26, h: 26, delay: 100 },
+  { kind: 'arch', color: 'var(--blue)', x: 68, y: 60, w: 28, h: 34, delay: 200 },
+  { kind: 'semicircle', color: 'var(--pink)', x: 24, y: 33, w: 52, delay: 320 },
+  { kind: 'circle', color: 'var(--orange)', x: 38, y: 7, w: 24, delay: 440 },
+];
+
 /* Composición compacta para el pie de página: círculo rosa, triángulo azul,
    bloque verde y círculo amarillo, inspirada en el recurso de marca. */
 const FOOTER: Piece[] = [
@@ -94,7 +104,7 @@ const FOOTER: Piece[] = [
   { kind: 'circle', color: 'var(--yellow)', x: 39, y: 43, w: 30, delay: 270 },
 ];
 
-const VARIANTS: Record<Variant, Piece[]> = { hero: HERO, tower: TOWER, compact: COMPACT, footer: FOOTER };
+const VARIANTS: Record<Variant, Piece[]> = { hero: HERO, tower: TOWER, support: SUPPORT, compact: COMPACT, footer: FOOTER };
 
 type Props = {
   variant?: Variant;
