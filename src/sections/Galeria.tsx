@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react';
 import { gallery } from '../data/content';
 import { SectionHeader } from '../components/SectionHeader';
 import { Reveal } from '../components/Reveal';
@@ -22,6 +23,20 @@ const TILES: Tile[] = [
 ];
 
 export function Galeria() {
+  const [videoOpen, setVideoOpen] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (!videoOpen || !videoRef.current) return;
+    videoRef.current.volume = 0.5;
+    void videoRef.current.play().catch(() => undefined);
+  }, [videoOpen]);
+
+  const closeVideo = () => {
+    videoRef.current?.pause();
+    setVideoOpen(false);
+  };
+
   return (
     <section id="galeria" className={`section ${styles.section}`}>
       <div className="container">
@@ -44,10 +59,13 @@ export function Galeria() {
                   <span className={styles.phrase}>{t.text}</span>
                 </>
               ) : t.src && t.kind === 'video' ? (
-                <video className={styles.video} controls preload="metadata" playsInline>
-                  <source src={t.src} type="video/mp4" />
-                  Tu navegador no puede reproducir este video.
-                </video>
+                <button type="button" className={styles.videoPreview} onClick={() => setVideoOpen(true)} aria-label="Ver video de actividad">
+                  <img src="/casos/galeria-davita.jpg" alt="" className={styles.photo} loading="lazy" />
+                  <span className={styles.playButton} aria-hidden="true">
+                    <Icon name="play" size={28} />
+                  </span>
+                  <span className={styles.videoLabel}>Ver video de actividad</span>
+                </button>
               ) : t.src ? (
                 <img src={t.src} alt={t.label} className={styles.photo} style={{ objectPosition: t.position }} loading="lazy" />
               ) : (
@@ -61,6 +79,20 @@ export function Galeria() {
           ))}
         </ul>
       </div>
+
+      {videoOpen && (
+        <div className={styles.videoDialog} role="dialog" aria-modal="true" aria-label="Video de actividad" onClick={closeVideo}>
+          <div className={styles.videoDialogContent} onClick={(event) => event.stopPropagation()}>
+            <button type="button" className={styles.closeVideo} onClick={closeVideo} aria-label="Cerrar video">
+              ×
+            </button>
+            <video ref={videoRef} className={styles.video} controls playsInline>
+              <source src="/casos/actividad-taller.mp4" type="video/mp4" />
+              Tu navegador no puede reproducir este video.
+            </video>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

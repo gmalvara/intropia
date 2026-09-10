@@ -45,9 +45,97 @@
   object-fit: cover;
 }
 
+.videoPreview {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  overflow: hidden;
+  border-radius: var(--r-sm);
+  background: var(--ink);
+}
+
+.videoPreview::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 42%, rgba(0, 0, 0, 0.52));
+}
+
+.playButton {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  display: grid;
+  place-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: var(--pink);
+  color: #fff;
+  transform: translate(-50%, -50%);
+  transition: transform 200ms var(--ease), background-color 200ms var(--ease);
+}
+
+.videoPreview:hover .playButton {
+  background: var(--green);
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+.videoLabel {
+  position: absolute;
+  z-index: 1;
+  left: 1rem;
+  bottom: 0.9rem;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
 .video {
   display: block;
   background: #fff;
+}
+
+.videoDialog {
+  position: fixed;
+  z-index: 100;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  background: rgba(26, 26, 26, 0.76);
+}
+
+.videoDialogContent {
+  position: relative;
+  width: min(920px, 100%);
+}
+
+.videoDialogContent .video {
+  width: 100%;
+  height: auto;
+  max-height: calc(100dvh - 3rem);
+  border-radius: var(--r-md);
+  object-fit: contain;
+  background: #000;
+}
+
+.closeVideo {
+  position: absolute;
+  z-index: 1;
+  right: 0.6rem;
+  top: 0.6rem;
+  display: grid;
+  place-items: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  background: rgba(26, 26, 26, 0.72);
+  color: #fff;
+  font-size: 1.75rem;
+  line-height: 1;
 }
 
 .tileShape {
