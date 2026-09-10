@@ -69,6 +69,10 @@
   gap: 0.5rem;
 }
 
+.founderBody :global(.eyebrow) {
+  font-size: 1.26rem;
+}
+
 .founderName {
   font-size: 1.75rem;
   font-weight: 600;
