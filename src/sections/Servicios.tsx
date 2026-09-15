@@ -4,13 +4,6 @@ import { Reveal } from '../components/Reveal';
 import { Icon } from '../components/Icon';
 import styles from './Servicios.module.css';
 
-const TRAIN_THE_TRAINERS = [
-  'Oratoria y comunicación para facilitar',
-  'Principios de educación de adultos',
-  'Diseño de experiencias de aprendizaje participativas',
-  'Facilitación y manejo de grupos',
-];
-
 export function Servicios() {
   return (
     <section id="servicios" className={`section ${styles.section}`}>
@@ -39,17 +32,6 @@ export function Servicios() {
                 <span className={styles.label}>{line.label}</span>
                 <h3 className={`h3 ${styles.cardTitle}`}>{line.title}</h3>
                 <p className={styles.cardText}>{line.text}</p>
-                {line.kind === 'talleres' && (
-                  <div className={styles.trainTheTrainers}>
-                    <h4>Train the Trainers</h4>
-                    <p>Formamos facilitadores internos para multiplicar capacidades dentro de la organización.</p>
-                    <ul>
-                      {TRAIN_THE_TRAINERS.map((item) => (
-                        <li key={item}>{item}</li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
                 <ul className={styles.bullets}>
                   {line.bullets.map((b) => (
                     <li key={b}>{b}</li>
