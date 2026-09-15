@@ -27,13 +27,13 @@
 }
 
 .title {
-  max-width: 17ch;
+  max-width: 30ch;
   font-size: clamp(2.35rem, 5vw, 4.1rem);
   animation: fadeUp 700ms var(--ease) 80ms both;
 }
 
 .lead {
-  max-width: 34rem;
+  max-width: 49rem;
   color: var(--ink-soft);
   animation: fadeUp 700ms var(--ease) 160ms both;
 }
