@@ -12,7 +12,7 @@ type Tile =
   | { type: 'media'; label: string; kind: 'photo' | 'video'; src?: string; position?: string };
 
 const TILES: Tile[] = [
-  { type: 'media', label: 'Foto de taller', kind: 'photo', src: '/casos/galeria-davita.jpg' },
+  { type: 'media', label: 'Foto de taller', kind: 'photo', src: '/casos/galeria-cambio-queda.png' },
   { type: 'phrase', text: gallery.phrases[1], shape: 'circle', color: 'green' },
   { type: 'media', label: 'Video de actividad', kind: 'video', src: '/casos/actividad-taller.mp4' },
   { type: 'phrase', text: gallery.phrases[0], shape: 'triangle', color: 'yellow' },
