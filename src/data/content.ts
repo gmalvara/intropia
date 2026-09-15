@@ -264,7 +264,8 @@ export const methodologies = {
     { accent: 'orange' as Accent, icon: 'network', title: 'Liberating Structures', text: 'Microestructuras participativas que amplían la participación y generan conversaciones más inclusivas y efectivas.' },
     { accent: 'purple' as Accent, icon: 'people', title: 'World Café', text: 'Conversaciones colaborativas para recoger perspectivas diversas y construir comprensión compartida.' },
     { accent: 'green' as Accent, icon: 'bulb-heart', title: 'Design Thinking', text: 'Enfoque centrado en las personas para comprender problemas, explorar ideas y diseñar soluciones de alto valor.' },
-    { accent: 'pink' as Accent, icon: 'megaphone-people', title: 'Train the Trainers', text: 'Formamos facilitadores internos para diseñar y conducir experiencias de aprendizaje, integrando oratoria, educación de adultos, facilitación y manejo de grupos.' },
+    { accent: 'pink' as Accent, icon: 'megaphone-people', title: 'Programa Train the Trainers', text: 'Formamos facilitadores internos para diseñar y conducir experiencias de aprendizaje, integrando oratoria, educación de adultos, facilitación y manejo de grupos.' },
+    { accent: 'orange' as Accent, icon: 'megaphone', title: 'Programa de liderazgo y oratoria', text: 'Fortalecemos la capacidad de liderar con éxito, comunicar de forma clara, persuasiva y eficaz, y generar impacto en equipos y organizaciones.' },
   ],
 };
 
