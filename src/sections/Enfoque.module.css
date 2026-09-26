@@ -6,7 +6,7 @@
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   gap: clamp(2rem, 6vw, 5rem);
-  align-items: start;
+  align-items: center;
 }
 
 .steps {
@@ -15,6 +15,8 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 1.25rem;
   padding-top: 0.5rem;
+  transform: scale(1.1);
+  transform-origin: center;
 }
 
 /* línea del recorrido, pasa por los puntos */
@@ -69,6 +71,7 @@
   .steps {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem 1.25rem;
+    transform: none;
   }
 
   .steps::before {
