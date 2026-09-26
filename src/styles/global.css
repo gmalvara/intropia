@@ -109,7 +109,11 @@ button {
   display: inline-flex;
   flex-direction: column;
   gap: 0.5rem;
-  font-size: var(--fs-eyebrow);
+  padding: 0.45rem 0.75rem 0.35rem;
+  border: 1px solid color-mix(in srgb, var(--pink) 45%, transparent);
+  border-radius: 0.5rem;
+  background: color-mix(in srgb, var(--pink) 10%, transparent);
+  font-size: 1.26rem;
   font-weight: 600;
   letter-spacing: 0.02em;
   color: var(--blue);
