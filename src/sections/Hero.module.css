@@ -23,7 +23,19 @@
 }
 
 .eyebrow {
+  padding: 0.55rem 1rem 0.45rem;
+  border: 1px solid color-mix(in srgb, var(--blue) 28%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--blue) 7%, transparent);
+  font-size: 1.3125rem;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
   animation: fadeUp 700ms var(--ease) both;
+}
+
+.eyebrow::after {
+  width: 42px;
+  height: 3px;
 }
 
 .title {
